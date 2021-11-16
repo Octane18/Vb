@@ -1,0 +1,38 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1, Str2, cstf1, cstf2 As String
+        Dim thisChar As Char
+        Dim Count, pos1, pos2 As Integer
+
+        Str1 = ""
+        Str2 = ""
+        thisChar = ""
+        Count = 0
+        pos1 = 0
+        pos2 = 0
+        cstf1 = ""
+        cstf2 = ""
+
+
+        Console.Write("Enter Str1: ")
+        Str1 = Console.ReadLine
+
+        cstf1 = "not"
+        cstf2 = "bad"
+        pos1 = InStr(Str1, cstf1)
+        pos2 = InStr(Str1, cstf2)
+        If pos1 <> 0 And pos2 <> 0 Then
+            For Count = 1 To pos1 - 2
+                thisChar = Mid(Str1, Count, 1)
+                Str2 = Str2 & thisChar
+            Next
+            Console.WriteLine(Str2 & " " & "good")
+        Else : Console.WriteLine(Str1)
+
+        End If
+
+        Console.ReadKey()
+    End Sub
+
+End Module
