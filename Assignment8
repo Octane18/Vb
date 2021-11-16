@@ -1,0 +1,31 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1, Str2 As String
+        Dim thisChar, firstChar As Char
+        Dim Count As Integer
+
+        Str1 = ""
+        Str2 = ""
+        thisChar = ""
+        Count = 0
+
+
+        Console.Write("Enter Str1: ")
+        Str1 = Console.ReadLine
+        firstChar = Left(Str1, 1)
+        Str2 = Str2 & firstChar
+
+        For Count = 2 To Str1.Length
+            thisChar = Mid(Str1, Count, 1)
+            If thisChar = firstChar Then
+                Str2 = Str2 & "*"
+            Else : Str2 = Str2 & thisChar
+            End If
+        Next
+        Console.Write("Altered string: " & Str2)
+        Console.ReadKey()
+
+    End Sub
+
+End Module
