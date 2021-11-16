@@ -1,0 +1,39 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1, Str2, Str3, Str4, ft1, ft2 As String
+        Dim thisChar As Char
+        Dim Count As Integer
+
+        Str1 = ""
+        Str2 = ""
+        Str3 = ""
+        Str4 = ""
+        ft1 = ""
+        ft2 = ""
+        thisChar = ""
+        Count = 0
+
+        Console.Write("Enter Str1: ")
+        Str1 = Console.ReadLine
+        Console.Write("Enter Str2: ")
+        Str2 = Console.ReadLine
+        ft1 = Left(Str1, 2)
+        Str4 = Str4 & ft1
+        ft2 = Left(Str2, 2)
+        Str3 = Str3 & ft2
+   
+
+        For Count = 3 To Str1.Length
+            thisChar = Mid(Str1, Count, 1)
+            Str3 = Str3 & thisChar
+        Next
+        For Count = 3 To Str2.Length
+            thisChar = Mid(Str2, Count, 1)
+            Str4 = Str4 & thisChar
+        Next
+        Console.Write("Extracted String: " & Str3 & " " & Str4)
+        Console.ReadKey()
+    End Sub
+
+End Module
