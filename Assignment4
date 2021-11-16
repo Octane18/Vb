@@ -1,0 +1,37 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1 As String
+        Dim myChar, thisChar, nextChar As Char
+        Dim Count, Count2, Count3, Highest As Integer
+
+        Str1 = ""
+        nextChar = ""
+        thisChar = ""
+        Count = 0
+        Count2 = 0
+        Count3 = 0
+        Highest = 0
+
+        Console.Write("Enter Str1 : ")
+        Str1 = Console.ReadLine
+
+        For Count = 1 To Str1.Length
+            thisChar = Mid(Str1, Count, 1)
+            Count3 = 0
+            For Count2 = 1 To Str1.Length
+                nextChar = Mid(Str1, Count2, 1)
+                If thisChar = nextChar Then
+                    Count3 = Count3 + 1
+                End If
+            Next
+            If Count3 > Highest Then
+                Highest = Count3
+                myChar = thisChar
+            End If
+        Next
+        Console.WriteLine(myChar & " " & "occured" & " " & Highest & " " & "Number of times")
+        Console.ReadKey()
+    End Sub
+
+End Module
