@@ -1,0 +1,19 @@
+Module Module1
+
+    Sub Main()
+        Dim DonutCount As Integer
+
+        DonutCount = 0
+
+        Console.Write("Enter count for donuts: ")
+        DonutCount = Console.ReadLine
+
+        If DonutCount < 10 Then
+            Console.WriteLine("Number of donuts: " & DonutCount)
+        ElseIf DonutCount >= 10 Then
+            Console.WriteLine("Number of donuts: many")
+        End If
+        Console.ReadKey()
+    End Sub
+
+End Module
