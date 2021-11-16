@@ -1,0 +1,28 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1, Str2, Char2 As String
+        Dim thisChar As Char
+        Dim Count As Integer
+
+        Str1 = ""
+        Str2 = ""
+        thisChar = "'"
+        Count = 0
+        Char2 = ""
+
+        Console.Write("Enter Str1 : ")
+        Str1 = Console.ReadLine
+
+        Char2 = Left(Str1, 2)
+        Str2 = Str2 & Char2
+        Char2 = Right(Str1, 2)
+        Str2 = Str2 & Char2
+        If Str1.Length < 2 Then
+            Console.Write("Not enough character: " & Str1)
+        Else : Console.Write("Extracted characters: " & Str2)
+        End If
+        Console.ReadKey()
+    End Sub
+
+End Module
