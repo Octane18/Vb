@@ -1,0 +1,32 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1, Str2 As String
+        Dim Char1, Char2, thisChar As Char
+        Dim Count As Integer
+
+        Str1 = "’"
+        Str2 = ""
+        Char1 = ""
+        Char2 = ""
+        thisChar = ""
+        Count = 0
+        Console.Write("Enter Str1: ")
+        Str1 = Console.ReadLine
+        Console.Write("Enter character to be replaced: ")
+        Char1 = Console.ReadLine
+        Console.Write("Enter character to be placed instead: ")
+        Char2 = Console.ReadLine
+
+        For Count = 1 To Str1.Length
+            thisChar = Mid(Str1, Count, 1)
+            If thisChar = Char1 Then
+                Str2 = Str2 & Char2
+            Else : Str2 = Str2 & thisChar
+            End If
+        Next
+        Console.Write("Substituted String: " & Str2)
+        Console.ReadKey()
+    End Sub
+
+End Module
