@@ -1,0 +1,39 @@
+Module Module1
+
+    Sub Main()
+        Dim Str1 As String
+        Dim thisChar As Char
+        Dim Count, ACount, ECount, ICount, OCount, UCount As Integer
+
+        Str1 = ""
+        thisChar = "'"
+        Count = 0
+        ACount = 0
+        ECount = 0
+        ICount = 0
+        OCount = 0
+        UCount = 0
+
+        Console.Write("Enter Str1: ")
+        Str1 = Console.ReadLine
+        Str1 = UCase(Str1)
+
+        For Count = 1 To Str1.Length
+            thisChar = Mid(Str1, Count, 1)
+            Select (thisChar)
+                Case "A" : ACount = ACount + 1
+                Case "E" : ECount = ECount + 1
+                Case "I" : ICount = ICount + 1
+                Case "O" : OCount = OCount + 1
+                Case "U" : UCount = UCount + 1
+            End Select
+        Next
+        Console.WriteLine("Count of A:" & " " & ACount)
+        Console.WriteLine("Count of E:" & " " & ECount)
+        Console.WriteLine("Count of I:" & " " & ICount)
+        Console.WriteLine("Count of O:" & " " & OCount)
+        Console.WriteLine("Count of U:" & " " & UCount)
+        Console.ReadKey()
+    End Sub
+
+End Module
